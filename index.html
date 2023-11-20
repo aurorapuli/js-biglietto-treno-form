@@ -10,11 +10,20 @@
     <main>
         <h1>Calcola il biglietto del treno</h1>
         <div id="input">
-            <input type="text" class="nomeUser">
+            <div>
+                <p>Nome</p>
+                <input type="text" class="nomeUser">
+            </div>
+           <div>
+            <p>Km che devi percorrere</p>
             <input type="number" class="kmPercorsi">
-            <input type="number" class="eta">
+           </div>
+            <div>
+                <p>Età</p>
+                <input type="number" class="eta">
+            </div>   
         </div>
-        <div>
+        <div class="button">
             <button id="send">Genera</button>
             <button>Annulla</button>
         </div>
@@ -42,16 +51,10 @@
                 <div>
                     <strong>Costo biglietto</strong>
                     <div class="costo"></div>
-                </div>
-                
-            </div>
-
-            
+                </div> 
+            </div>  
         </div>
-
     </main>
-   
-    <script type="text/javascript" src="js/script.js"></script>
-    
+    <script type="text/javascript" src="js/script.js"></script>  
 </body>
 </html>

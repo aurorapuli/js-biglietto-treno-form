@@ -54,7 +54,8 @@ if (inputEta.value < 18){
     document.querySelector(".name").innerHTML = nomeUser;
     document.querySelector(".costo").innerHTML = risultato + "€";
     document.querySelector(".carrozza").innerHTML = 5;
-   document.querySelector(".codiceCp").innerHTML= 100;
+    document.querySelector(".codiceCp").innerHTML= 100;
+    document.getElementById("biglietto").style.display = "block";
   }
 
 );
