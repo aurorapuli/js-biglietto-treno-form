@@ -16,41 +16,51 @@ let eta;
 
 let risultato
 
-const prezzo = (inputKm * 0,21);
-console.log (prezzo );
-
-
-if (inputEta < 18){
-    risultato = (prezzo * 0,80);
-    console.log(risultato);
-    
-} else if (inputEta > 65){
-    risultato = (prezzo * 0,20);
-    console.log(risultato);
-
-} else{
-    risultato = prezzo
-}
-
-
-
-
 
 sendButton.addEventListener("click" ,
 
   function () {
     nomeUser = inputName.value;
     console.log(nomeUser);
-
-
+    
     kmPercorsi = parseInt(inputKm.value);
     console.log(kmPercorsi);
 
     eta = parseInt(inputEta.value);
     console.log(eta);   
 
+    const prezzo = (inputKm.value * 0.21);
+    
+
+if (inputEta.value < 18){
+    risultato = (prezzo * 0.80);
+    risultato = risultato.toFixed(2);
+    document.querySelector(".offerta").innerHTML = "Biglietto Minorenni";
+    console.log(risultato);
+    
+} else if (inputEta.value > 65){
+    risultato = (prezzo * 0.60);
+    risultato = risultato.toFixed(2);
+    document.querySelector(".offerta").innerHTML = "Biglietto Over 65";
+    console.log(risultato);
+
+} else{
+    risultato = prezzo
+    risultato = risultato.toFixed(2);
+    document.querySelector(".offerta").innerHTML = "Biglietto Standard";
+    console.log(risultato);
+}
+
+    document.querySelector(".name").innerHTML = nomeUser;
+    document.querySelector(".costo").innerHTML = risultato + "€";
+    document.querySelector(".carrozza").innerHTML = 5;
+   document.querySelector(".codiceCp").innerHTML= 100;
   }
+
 );
+
+
+
 
 
 
