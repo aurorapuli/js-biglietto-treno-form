@@ -8,6 +8,8 @@ const inputEta = document.querySelector(".eta");
 
 const sendButton = document.getElementById ("send");
 
+const closeButton = document.getElementById ("close");
+
 let nomeUser;
 
 let kmPercorsi;
@@ -21,13 +23,13 @@ sendButton.addEventListener("click" ,
 
   function () {
     nomeUser = inputName.value;
-    console.log(nomeUser);
+    // console.log(nomeUser);
     
     kmPercorsi = parseInt(inputKm.value);
-    console.log(kmPercorsi);
+    // console.log(kmPercorsi);
 
     eta = parseInt(inputEta.value);
-    console.log(eta);   
+    // console.log(eta);   
 
     const prezzo = (inputKm.value * 0.21);
     
@@ -36,19 +38,19 @@ if (inputEta.value < 18){
     risultato = (prezzo * 0.80);
     risultato = risultato.toFixed(2);
     document.querySelector(".offerta").innerHTML = "Biglietto Minorenni";
-    console.log(risultato);
+    // console.log(risultato);
     
 } else if (inputEta.value > 65){
     risultato = (prezzo * 0.60);
     risultato = risultato.toFixed(2);
     document.querySelector(".offerta").innerHTML = "Biglietto Over 65";
-    console.log(risultato);
+    // console.log(risultato);
 
 } else{
     risultato = prezzo
     risultato = risultato.toFixed(2);
     document.querySelector(".offerta").innerHTML = "Biglietto Standard";
-    console.log(risultato);
+    // console.log(risultato);
 }
 
     document.querySelector(".name").innerHTML = nomeUser;
@@ -60,6 +62,17 @@ if (inputEta.value < 18){
 
 );
 
+
+
+closeButton.addEventListener("click" ,
+  
+    function(){
+        document.getElementById("biglietto").style.display = "none";
+    }
+
+
+
+);
 
 
 
